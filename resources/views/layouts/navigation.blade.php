@@ -25,9 +25,11 @@
                         Лиды
                     </x-nav-link>
                     @endhasanyrole
+                    @if(auth()->user()->can('Возможность добавлять отделы'))
                     <x-nav-link :href="route('departments')" :active="request()->routeIs('departments')">
                         Отделы
                     </x-nav-link>
+                    @endif
                     @role('super-user')
                     <x-nav-link :href="route('users')" :active="request()->routeIs('users')">
                         Пользователи
@@ -36,6 +38,9 @@
                         Редактирование ролей
                     </x-nav-link>
                     @endrole
+                    <x-nav-link :href="route('departments')" :active="request()->routeIs('departments')">
+
+                    </x-nav-link>
                 </div>
             </div>
 
