@@ -15,6 +15,12 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         Главная
                     </x-nav-link>
+                    <x-nav-link :href="route('houses')" :active="request()->routeIs('houses')">
+                        Покупка Дома/Квартиры
+                    </x-nav-link>
+                    <x-nav-link :href="route('clients')" :active="request()->routeIs('clients')">
+                        Дома
+                    </x-nav-link>
                     @if(auth()->user()->can('Возможность добавлять клиентов'))
                     <x-nav-link :href="route('clients')" :active="request()->routeIs('clients')">
                         Клиенты
