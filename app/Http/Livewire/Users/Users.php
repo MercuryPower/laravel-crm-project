@@ -16,7 +16,7 @@ class Users extends Component
 
     public function render()
     {
-        $users = User::all();
+        $users = User::all()->where('name', '!=','Admin');
         return view('livewire.users.users', ['users'=>$users]);
     }
 }

@@ -16,10 +16,7 @@
                         Главная
                     </x-nav-link>
                     <x-nav-link :href="route('houses')" :active="request()->routeIs('houses')">
-                        Покупка Дома/Квартиры
-                    </x-nav-link>
-                    <x-nav-link :href="route('clients')" :active="request()->routeIs('clients')">
-                        Дома
+                        Покупка Дома
                     </x-nav-link>
                     @if(auth()->user()->can('Возможность добавлять клиентов'))
                     <x-nav-link :href="route('clients')" :active="request()->routeIs('clients')">
@@ -44,9 +41,6 @@
                         Редактирование ролей
                     </x-nav-link>
                     @endrole
-                    <x-nav-link :href="route('departments')" :active="request()->routeIs('departments')">
-
-                    </x-nav-link>
                 </div>
             </div>
 
@@ -120,7 +114,7 @@
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="px-4">
-                <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
+                <div class="font-medium text-base text-gray-800"><i class="fa-solid fa-user" style="color: #000000;"></i>{{ Auth::user()->name }}</div>
                 <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
             </div>
 

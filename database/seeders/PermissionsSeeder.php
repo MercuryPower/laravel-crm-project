@@ -27,5 +27,6 @@ class PermissionsSeeder extends Seeder
         Permission::create(['name'=>'Возможность удалять отделы']);
         Permission::create(['name'=>'Возможность редактировать отделы']);
 
+
     }
 }
